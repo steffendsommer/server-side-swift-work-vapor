@@ -5,9 +5,6 @@ internal enum EnvironmentKey {
     }
 
     enum MySQL {
-        static let hostname = "DATABASE_HOSTNAME"
-        static let username = "DATABASE_USER"
-        static let password = "DATABASE_PASSWORD"
-        static let database = "DATABASE_DB"
+        static let connection = "DB_MYSQL_SSSWORK"
     }
 }

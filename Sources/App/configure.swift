@@ -35,12 +35,9 @@ private func providers(_ services: inout Services, _ environment: Environment) t
 // MARK: Databases
 
 private func databases(_ services: inout Services) throws {
-    let config = MySQLDatabaseConfig(
-        hostname: env(EnvironmentKey.MySQL.hostname, "127.0.0.1"),
-        username: env(EnvironmentKey.MySQL.username, "root"),
-        password: env(EnvironmentKey.MySQL.password, ""),
-        database: env(EnvironmentKey.MySQL.database, "ssswork")
-    )
+    guard let config = try MySQLDatabaseConfig(url: env(EnvironmentKey.MySQL.connection, "")) else {
+        throw Abort(.internalServerError, reason: "Could not connect to MySQL")
+    }
 
     let mysql = MySQLDatabase(config: config)
     var databases = DatabasesConfig()
