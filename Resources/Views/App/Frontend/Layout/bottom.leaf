@@ -1,7 +1,7 @@
 <footer class="my-5 pt-5 text-muted text-center text-small">
-<p class="mb-1">&copy; 2018 <a href="http://steffendsommer.com">Steffen D. Sommer</a></p>
+<p class="mb-1">&copy; 2018 <a href="http://steffendsommer.com" target="blank">Steffen D. Sommer</a></p>
 <ul class="list-inline">
-  <li class="list-inline-item"><a href="https://twitter.com/swiftserverwork">Twitter</a></li>
+  <li class="list-inline-item"><a href="https://twitter.com/swiftserverwork" target="blank">Twitter</a></li>
   <li class="list-inline-item"><a href="mailto:hello@serversideswift.work">Contact</a></li>
 </ul>
 </footer>

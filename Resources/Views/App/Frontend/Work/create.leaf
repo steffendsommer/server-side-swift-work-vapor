@@ -5,6 +5,7 @@
     <p>Please fill out all fields before submitting the form.</p>
     <form method="post" action="/create">
         #submissions:text("company", "Enter company name")
+        #submissions:text("companyLogoUrl", "Enter company logo URL")
         #submissions:text("location", "Enter location")
 
         <div class="form-group">

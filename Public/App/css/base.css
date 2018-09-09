@@ -1,9 +1,96 @@
+body {
+    background-color: #f0ece2;
+}
+
+.logo {
+    margin-bottom: 20px;
+}
+
+a {
+    color: #596e79;
+}
+
+a:hover {
+    color: #c7b198;
+    text-decoration:none;
+}
+
+.btn-primary {
+    background-color: #596e79;
+    border:0px;
+}
+
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open>.dropdown-toggle.btn-primary {
+    background-color: #c7b198 !important;
+}
+
+.card {
+    background-color: #dfd3c3;
+    border:0px;
+}
+
+label {
+    font-weight:bold;
+}
+
+.form-control {
+    border:0px;
+}
+
 .container {
     max-width: 960px;
 }
 
 .work-list .work {
-    margin-bottom: 60px;
+    margin-bottm: 60px;
+}
+
+.work-list .work .date {
+    color: #c7b198;
+    font-size:14px;
+    font-weight:bold;
+}
+
+.work-list .work .header {
+    margin-bottom: 10px;
+}
+
+.work-list .work .header img {
+  float: right;
+  max-width: 150px;
+  max-height: 70px;
+  margin-right: 20px;
+}
+
+.work-list .work .header h1 {
+  position: relative;
+  top: 18px;
+  left: 10px;
+}
+
+.badge-vapor {
+    background-color:#D239F3;
+    color:#FFFFFF;
+}
+
+.badge-perfect {
+    background-color:#C63722;
+    color:#FFFFFF;
+}
+
+.badge-kitura {
+    background-color:#00AADE;
+    color:#FFFFFF;
+}
+
+.badge-other {
+    background-color:#c7b198;
+    color:#FFFFFF;
+}
+
+.badge-kind {
+    background-color:#596e79;
+    color:#FFFFFF;
 }
 
 .sidebar .create {

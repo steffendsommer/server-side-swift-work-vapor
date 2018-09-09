@@ -35,7 +35,7 @@
         <meta name="twitter:site" content="@swiftserverwork" />
     </head>
 
-    <body class="bg-light">
+    <body>
         #embed("App/Frontend/Layout/content")
         
         <!-- jQuery -->

@@ -29,6 +29,7 @@ internal final class Work: Codable {
     var id: Int?
 
     internal var company: String
+    internal var companyLogoUrl: String
     internal var location: String
     internal var kind: Kind
     internal var framework: Framework
@@ -45,6 +46,7 @@ internal final class Work: Codable {
 
     internal init(
         company: String,
+        companyLogoUrl: String,
         location: String,
         kind: Kind,
         framework: Framework,
@@ -55,6 +57,7 @@ internal final class Work: Codable {
         contactEmail: String
     ) {
         self.company = company
+        self.companyLogoUrl = companyLogoUrl
         self.location = location
         self.kind = kind
         self.framework = framework

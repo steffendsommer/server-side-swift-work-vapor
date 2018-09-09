@@ -8,9 +8,13 @@
 
         #for(work in data) {
             <div class="work">
-                <h2><a href="#(work.externalUrl)" target="_blank">#(work.title)</a></h2>
-                <h4>#(work.company) - #(work.location)</h4>
-                <h5><span class="badge badge-info">#(uppercase(work.kind))</span> <span class="badge badge-secondary">#(uppercase(work.framework))</span></h5>
+                <div class="header">
+                    <img src="#(work.companyLogoUrl)" alt="companyLogo" />
+                    <h3><a href="#(work.externalUrl)" target="_blank">#(work.title)</a></h3>
+                    <h5>#(work.company) - #(work.location)</h5>
+                    <h6><span class="badge badge-kind">#(uppercase(work.kind))</span> <span class="badge badge-#(work.framework)">#(uppercase(work.framework))</span></h6>
+                    <span class="date">Posted on #date(work.approvedAt, "EEEE, MMM d, yyyy")</span>
+                </div>
                 <p>#(work.description)</p>
             </div>
         }

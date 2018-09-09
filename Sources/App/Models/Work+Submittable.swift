@@ -7,6 +7,7 @@ import Vapor
 extension Work: Submittable {
     public struct Submission: SubmissionType {
         let company: String?
+        let companyLogoUrl: String?
         let location: String?
         let kind: String?
         let framework: String?
@@ -18,6 +19,7 @@ extension Work: Submittable {
 
         public init(_ work: Work?) {
             company = work?.company
+            companyLogoUrl = work?.companyLogoUrl
             location = work?.location
             kind = work?.kind.rawValue
             framework = work?.framework.rawValue
@@ -33,6 +35,11 @@ extension Work: Submittable {
                 makeFieldEntry(
                     keyPath: \.company,
                     label: "Company",
+                    validators: [.count(2...191)]
+                ),
+                makeFieldEntry(
+                    keyPath: \.companyLogoUrl,
+                    label: "Company logo URL",
                     validators: [.count(2...191)]
                 ),
                 makeFieldEntry(
@@ -80,6 +87,7 @@ extension Work: Submittable {
 
     public struct Create: Decodable {
         let company: String
+        let companyLogoUrl: String
         let location: String
         let kind: Kind
         let framework: Framework
@@ -93,6 +101,7 @@ extension Work: Submittable {
     public convenience init(_ create: Create) throws {
         self.init(
             company: create.company,
+            companyLogoUrl: create.companyLogoUrl,
             location: create.location,
             kind: create.kind,
             framework: create.framework,
@@ -107,6 +116,10 @@ extension Work: Submittable {
     public func update(_ submission: Submission) throws {
         if let company = submission.company, !company.isEmpty {
             self.company = company
+        }
+
+        if let companyLogoUrl = submission.companyLogoUrl, !companyLogoUrl.isEmpty {
+            self.companyLogoUrl = companyLogoUrl
         }
 
         if let location = submission.location, !location.isEmpty {
