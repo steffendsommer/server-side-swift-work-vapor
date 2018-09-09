@@ -1,0 +1,14 @@
+<div class="container">
+    #embed("App/Frontend/Layout/top")
+    <div class="row">
+        <div class="col-md-4 order-md-2 mb-4 sidebar">
+            #embed("App/Frontend/Layout/sidebar")
+        </div>
+        <div class="col-md-8 order-md-1">
+            <main role="main">
+                #get(content)
+            </main>
+        </div>
+    </div>
+    #embed("App/Frontend/Layout/bottom")
+</div>

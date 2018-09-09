@@ -1,0 +1,47 @@
+#set("content") {
+    <h2>Create a post</h2>
+    <p>Please fill out all fields before submitting the form.</p>
+    <form method="post" action="/create">
+        #submissions:text("company", "Enter company name")
+        #submissions:text("location", "Enter location")
+
+        <div class="form-group">
+            <label for="kind">Kind</label>
+            <select class="form-control" id="kind" name="kind">
+                <option>Please select</option>
+                <option value="fullTime">Full time</option>
+                <option value="partTime">Part time</option>
+                <option value="contract">Contract</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="kind">Framework</label>
+            <select class="form-control" id="framework" name="framework">
+                <option>Please select</option>
+                <option value="vapor">Vapor</option>
+                <option value="perfect">Perfect</option>
+                <option value="kitura">Kitura</option>
+                <option value="other">Other</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="kind">Remote work allowed</label>
+            <select class="form-control" id="remoteAllowed" name="remoteAllowed">
+                <option>Please select</option>
+                <option value="1">Yes</option>
+                <option value="0">No</option>
+            </select>
+        </div>
+
+        #submissions:text("title", "Enter title of work")
+        #submissions:textarea("description", "Enter description")
+        #submissions:text("externalUrl", "Enter external URL")
+        #submissions:text("contactEmail", "Enter your email")
+
+        <button class="btn btn-primary btn-lg btn-block" type="submit">Submit</button>
+    </form>
+}
+
+#embed("App/Frontend/Layout/base")

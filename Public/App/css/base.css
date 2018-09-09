@@ -1,0 +1,23 @@
+.container {
+    max-width: 960px;
+}
+
+.work-list .work {
+    margin-bottom: 60px;
+}
+
+.sidebar .create {
+    margin-bottom: 40px;
+}
+
+.sidebar .create .btn {
+    margin-top: 20px;
+}
+
+.sidebar .subscribe form {
+    margin-top: 20px;   
+}
+
+.sidebar .card {
+    padding: 10px;
+}

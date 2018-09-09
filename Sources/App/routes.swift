@@ -2,8 +2,8 @@ import Vapor
 
 /// Register your application's routes here.
 public func routes(_ router: Router) throws {
-    // Basic "Hello, world!" example
-    router.get("/") { req in
-        return "Server-Side Swift Work - TBC.."
-    }
+    let workController = FrontendWorkController()
+    router.get("/", use: workController.renderList)
+    router.get("/create", use: workController.renderCreate)
+    router.post("/create", use: workController.create)
 }

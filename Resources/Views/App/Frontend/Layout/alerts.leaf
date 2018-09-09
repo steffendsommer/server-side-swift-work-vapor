@@ -1,0 +1,9 @@
+<div class="alerts">
+#flash() {
+    #for(flash in all) {
+        #bs:alert(flash.bootstrapClass) {
+            #(flash.message)
+        }
+    }
+}
+</div>

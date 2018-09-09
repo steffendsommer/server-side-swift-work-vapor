@@ -1,0 +1,27 @@
+<div class="card p-3 create">
+    <h4>Create a post</h4>
+    Are you looking for candidates to carry out some Server-Side Swift work? Reach out to the network of interested candiates by creating a post.
+    <a href="/create" class="btn btn-primary">Create a post</a>
+</div>
+
+<div class="card p-3 subscribe">
+    <h4>Get notified</h4>
+    Stay up to date with all new posts by getting them in your mailbox each week.
+    <!-- Begin MailChimp Signup Form -->
+    <div id="mc_embed_signup">
+        <form action="https://work.us19.list-manage.com/subscribe/post?u=d9abc28c85f3aafc8c38009a4&amp;id=6bf8f37bd1" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+            <div id="mc_embed_signup_scroll">
+          
+                <div class="form-group mc-field-group">
+                    <input type="email" class="form-control required email" name="EMAIL" id="mce-EMAIL" aria-describedby="emailHelp" placeholder="Enter email">
+                    <small id="emailHelp" class="form-text text-muted">Your email will never be shared with anyone else.</small>
+                </div>
+
+                <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_d9abc28c85f3aafc8c38009a4_6bf8f37bd1" tabindex="-1" value=""></div>
+                <div class="clear"><input type="submit" value="Submit" name="subscribe" id="mc-embedded-subscribe" class="button btn btn-primary btn-block"></div>
+            </div>
+        </form>
+    </div>
+    <!--End mc_embed_signup-->
+</div>

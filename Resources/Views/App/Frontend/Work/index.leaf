@@ -1,0 +1,18 @@
+#set("content") {
+    <div class="work-list">
+        #if(count(data) == 0) {
+            There's no work at the moment - please come back later.
+        }
+
+        #for(work in data) {
+            <div class="work">
+                <h2><a href="#(work.externalUrl)" target="_blank">#(work.title)</a></h2>
+                <h4>Nodes - Copenhagen, Denmark</h4>
+                <h5><span class="badge badge-info">#(uppercase(work.kind))</span> <span class="badge badge-secondary">#(uppercase(work.framework))</span></h5>
+                <p>#(work.description)</p>
+            </div>
+        }
+    </div>
+}
+
+#embed("App/Frontend/Layout/base")

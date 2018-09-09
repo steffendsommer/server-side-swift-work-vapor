@@ -1,0 +1,8 @@
+<div class="py-5 text-center">
+<h2>👨‍💻👩‍💻</h2>
+<h2><a href="/">Server-Side Swift Work</a></h2>
+<p class="lead">The go-to resource for finding applicants or work within the Server-Side Swift space</p>
+<a href="https://twitter.com/swiftserverwork?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-count="false">Follow @swiftserverwork</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+</div>
+
+#embed("App/Frontend/Layout/alerts")
