@@ -42,9 +42,9 @@ label {
 }
 
 .work-list .work {
-    padding: 15px;
+    padding: 1rem;
     background: white;
-    border-radius: 5px;
+    border-radius: .25rem;
     margin-bottom: 60px;
 }
 
