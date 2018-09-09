@@ -8,7 +8,7 @@ import Vapor
 internal final class FrontendWorkController {
     // MARK: List
     func renderList(_ req: Request) throws -> Future<View> {
-        return Work.query(on: req).filter(\.approvedAt != nil).all()
+        return Work.query(on: req).filter(\.approvedAt != nil).sort(\.approvedAt, .descending).all()
             .flatMap(to: View.self) { work in
                 return try req.privateContainer
                     .make(LeafRenderer.self)
