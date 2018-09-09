@@ -1,3 +1,5 @@
+#set("pageTitle") { All posts | Server-Side Swift Work }
+
 #set("content") {
     <div class="work-list">
         #if(count(data) == 0) {

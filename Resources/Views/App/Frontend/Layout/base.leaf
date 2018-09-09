@@ -23,6 +23,16 @@
         <!-- Base -->
         <link href="/App/css/base.css" rel="stylesheet">
         #get(styles)
+
+        <meta property="og:title" content="Server-Side Swift Work" />
+        <meta property="og:locale" content="en_US" />
+        <meta name="description" content="The go-to resource for finding applicants or work within the Server-Side Swift space. Jobs, development, swift, programming, work, full time, part time, contract work, remote." />
+        <meta property="og:description" content="The go-to resource for finding applicants or work within the Server-Side Swift space. Jobs, development, swift, programming, work, full time, part time, contract work, remote." />
+        <link rel="canonical" href="https://www.serversideswift.work/" />
+        <meta property="og:url" content="https://www.serversideswift.work/" />
+        <meta property="og:site_name" content="Server-Side Swift Work" />
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:site" content="@swiftserverwork" />
     </head>
 
     <body class="bg-light">

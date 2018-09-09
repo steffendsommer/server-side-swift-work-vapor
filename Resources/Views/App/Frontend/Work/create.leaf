@@ -1,3 +1,5 @@
+#set("pageTitle") { Create post | Server-Side Swift Work }
+
 #set("content") {
     <h2>Create a post</h2>
     <p>Please fill out all fields before submitting the form.</p>
