@@ -47,7 +47,7 @@ label {
     padding: 1rem;
     background: white;
     border-radius: .25rem;
-    margin-bottom: 60px;
+    margin-bottom: 30px;
 }
 
 .work-list .work .date {
@@ -99,7 +99,7 @@ label {
 }
 
 .sidebar .create {
-    margin-bottom: 40px;
+    margin-bottom: 30px;
 }
 
 .sidebar .create .btn {
