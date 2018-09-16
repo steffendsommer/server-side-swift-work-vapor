@@ -2,7 +2,7 @@
 import PackageDescription
 
 let package = Package(
-    name: "server-side-swift-work",
+    name: "server-side-swift-work-vapor",
     dependencies: [
         .package(url: "https://github.com/vapor/vapor.git", from: "3.0.0"),
         .package(url: "https://github.com/vapor/fluent-mysql.git", from: "3.0.0"),
