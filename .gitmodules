@@ -1,0 +1,3 @@
+[submodule "Sources/App/Shared"]
+	path = Sources/App/Shared
+	url = https://steffendsommer@github.com/steffendsommer/server-side-swift-work-shared
