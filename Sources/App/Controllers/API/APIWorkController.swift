@@ -1,5 +1,6 @@
 import Fluent
 import FluentMySQL
+import ServerSideSwiftWorkShared
 import Vapor
 
 internal final class APIWorkController {
@@ -27,15 +28,15 @@ internal final class APIWorkController {
 }
 
 extension APIError: AbortError {
-    var identifier: String {
+    public var identifier: String {
         return "noWork"
     }
 
-    var status: HTTPResponseStatus {
+    public var status: HTTPResponseStatus {
         return .custom(code: self.httpCode, reasonPhrase: "No work available")
     }
 
-    var reason: String {
+    public var reason: String {
         return "Unfortunately, no work available at this moment."
     }
 }

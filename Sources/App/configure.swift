@@ -2,6 +2,7 @@ import Bootstrap
 import Flash
 import FluentMySQL
 import Leaf
+import ServerSideSwiftWorkShared
 import Submissions
 import Sugar
 import Vapor

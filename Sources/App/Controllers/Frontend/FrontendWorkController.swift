@@ -2,6 +2,7 @@ import Flash
 import Fluent
 import FluentMySQL
 import Leaf
+import ServerSideSwiftWorkShared
 import Submissions
 import Vapor
 

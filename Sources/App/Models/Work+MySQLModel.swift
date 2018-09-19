@@ -1,6 +1,7 @@
 import Fluent
 import FluentMySQL
 import MySQL
+import ServerSideSwiftWorkShared
 import Sugar
 import Vapor
 
@@ -21,13 +22,13 @@ extension Work.Kind: ReflectionDecodable {
 // MARK: MySQLModel
 
 extension Work: MySQLModel {
-    static let createdAtKey: TimestampKey? = \.createdAt
-    static let updatedAtKey: TimestampKey? = \.updatedAt
-    static let deletedAtKey: TimestampKey? = \.deletedAt
+    public static let createdAtKey: TimestampKey? = \.createdAt
+    public static let updatedAtKey: TimestampKey? = \.updatedAt
+    public static let deletedAtKey: TimestampKey? = \.deletedAt
 }
 
 extension Work: Migration {
-    static func prepare(on connection: MySQLConnection) -> Future<Void> {
+    public static func prepare(on connection: MySQLConnection) -> Future<Void> {
         return MySQLDatabase.create(self, on: connection) { builder in
             try addProperties(to: builder, excluding: [
                 Work.reflectProperty(forKey: \.description),

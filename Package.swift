@@ -13,6 +13,7 @@ let package = Package(
         .package(url: "https://github.com/nodes-vapor/submissions.git", from: "1.0.0-beta"),
         .package(url: "https://github.com/nodes-vapor/paginator.git", from: "3.0.0-beta"),
         .package(url: "https://github.com/nodes-vapor/bootstrap.git", from: "2.0.0"),
+        .package(url: "https://github.com/steffendsommer/server-side-swift-work-shared.git", .branch("master")),
     ],
     targets: [
         .target(name: "App", dependencies: [
@@ -23,7 +24,8 @@ let package = Package(
             "Sugar",
             "Submissions",
             "Paginator",
-            "Bootstrap"
+            "Bootstrap",
+            "ServerSideSwiftWorkShared"
         ]),
         .target(name: "Run", dependencies: ["App"]),
         .testTarget(name: "AppTests", dependencies: ["App"])

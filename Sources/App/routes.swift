@@ -1,3 +1,4 @@
+import ServerSideSwiftWorkShared
 import Vapor
 
 /// Register your application's routes here.
