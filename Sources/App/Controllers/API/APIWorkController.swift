@@ -13,7 +13,7 @@ internal final class APIWorkController {
             .all()
             .thenThrowing { items in
                 guard items.count > 0 else {
-                    throw WorkError.noWorkAvailable
+                    throw APIError.noWorkAvailable
                 }
                 return items
             }
@@ -26,7 +26,7 @@ internal final class APIWorkController {
     }
 }
 
-extension WorkError: AbortError {
+extension APIError: AbortError {
     var identifier: String {
         return "noWork"
     }
