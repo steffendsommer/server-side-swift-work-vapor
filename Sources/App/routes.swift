@@ -11,8 +11,16 @@ public func routes(_ router: Router) throws {
 
     // MARK: API
 
-    let api = router.grouped("api")
     let workAPIController = APIWorkController()
-    api.get("/work", use: workAPIController.workList)
-    api.get("/work", Work.parameter, use: workAPIController.work)
+    router.get(API.Endpoint.workList.route, use: workAPIController.workList)
+    router.get(API.Endpoint.work(0).route, use: workAPIController.work)
+}
+
+extension API.Endpoint {
+    var route: [PathComponentsRepresentable] {
+        switch self {
+        case .workList: return ["api", "work"]
+        case .work(_): return ["api", "work", Work.parameter]
+        }
+    }
 }

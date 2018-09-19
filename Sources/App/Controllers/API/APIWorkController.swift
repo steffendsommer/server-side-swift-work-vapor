@@ -26,17 +26,13 @@ internal final class APIWorkController {
     }
 }
 
-enum WorkError: Error {
-    case noWorkAvailable
-}
-
 extension WorkError: AbortError {
     var identifier: String {
         return "noWork"
     }
 
     var status: HTTPResponseStatus {
-        return .custom(code: 499, reasonPhrase: "No work available")
+        return .custom(code: self.httpCode, reasonPhrase: "No work available")
     }
 
     var reason: String {
