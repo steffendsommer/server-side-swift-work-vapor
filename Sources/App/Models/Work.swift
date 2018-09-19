@@ -5,25 +5,17 @@ import Sugar
 import Vapor
 
 internal final class Work: Codable {
-    internal enum Kind: String, Codable, ReflectionDecodable {
+    internal enum Kind: String, Codable {
         case fullTime
         case partTime
         case contract
-
-        public static func reflectDecoded() throws -> (Kind, Kind) {
-            return (.fullTime, .partTime)
-        }
     }
 
-    internal enum Framework: String, Codable, ReflectionDecodable {
+    internal enum Framework: String, Codable {
         case vapor
         case perfect
         case kitura
         case other
-
-        public static func reflectDecoded() throws -> (Framework, Framework) {
-            return (.vapor, .perfect)
-        }
     }
 
     var id: Int?
@@ -66,6 +58,20 @@ internal final class Work: Codable {
         self.description = description
         self.externalUrl = externalUrl
         self.contactEmail = contactEmail
+    }
+}
+
+// MARK: ReflectionDecodable
+
+extension Work.Framework: ReflectionDecodable {
+    public static func reflectDecoded() throws -> (Work.Framework, Work.Framework) {
+        return (.vapor, .perfect)
+    }
+}
+
+extension Work.Kind: ReflectionDecodable {
+    public static func reflectDecoded() throws -> (Work.Kind, Work.Kind) {
+        return (.fullTime, .partTime)
     }
 }
 
